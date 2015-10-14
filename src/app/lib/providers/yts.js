@@ -139,7 +139,7 @@
 
         function get(index) {
             var options = {
-                uri: Settings.ytsAPI[index].url + 'api/v2/get_random_movie.' + Settings.ytsAPI[index].ext +'?' + Math.round((new Date()).valueOf() / 1000),
+                uri: Settings.ytsAPI[index].url + 'api/v2/get_random_movie.' + Settings.ytsAPI[index].ext + '?' + Math.round((new Date()).valueOf() / 1000),
                 json: true,
                 timeout: 6000
             };
