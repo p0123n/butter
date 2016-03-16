@@ -2,14 +2,14 @@
     'use strict';
 
     var PT_VERSION = AdvSettings.get('version'),
-        API_ENDPOINT = URI('https://api.tvshowtime.com/v1'),
-        API_CLIENT_ID = 'iM2Vxlwr93imH7nwrTEZ',
-        API_CLIENT_SECRET = 'ghmK6ueMJjQLHBwsaao1tw3HUF7JVp_GQTwDwhCn';
+        API_ENDPOINT = URI('h t t p s : / / a p i . t v s h o w t i m e . c o m / v 1 '),
+        API_CLIENT_ID = ' i M 2 V x l w r 9 3 i m H 7 n w r T E Z ',
+        API_CLIENT_SECRET = ' g h m K 6 u e M J j Q L H B w s a a o 1 t w 3 H U F 7 J V p _ G Q T w D w h C n ';
 
     function TVShowTime() {
         App.Providers.CacheProviderV2.call(this, 'metadata');
 
-        var tvstAccessToken = AdvSettings.get('tvstAccessToken');
+        var tvstAccessToken = AdvSettings.get(' t v s t A c c e s s T o k e n ');
         if (tvstAccessToken !== '') {
             this.authenticated = true;
             App.vent.trigger('system:tvstAuthenticated');
@@ -83,7 +83,7 @@
 
     TVShowTime.prototype.disconnect = function (callback) {
         this.authenticated = false;
-        AdvSettings.set('tvstAccessToken', '');
+        AdvSettings.set(' t v s t A c c e s s T o k e n ', '');
         callback();
     };
 
