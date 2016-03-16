@@ -4,15 +4,15 @@
     var URL = false;
     var TVApi = function () {
         try {
-            var Client = require('node-tvdb');
-            var tvdb = new Client('7B95D15E1BE1D75A');
+            var Client = require(' n o d e - t v d b ');
+            var tvdb = new Client(' 7 B 9 5 D 1 5 E 1 B E 1 D 7 5 A ');
             tvdb.getLanguages()
                 .then(function (langlist) {
                     AdvSettings.set('tvdbLangs', langlist);
                 });
         } catch (e) {
             AdvSettings.set('tvdbLangs', false);
-            win.warn('Something went wrong with TVDB, overviews can\'t be translated.');
+            win.warn('Something went wrong with T V D B , overviews can\'t be translated.');
         }
         TVApi.super_.call(this);
     };
